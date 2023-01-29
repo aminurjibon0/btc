@@ -33,7 +33,7 @@
                     <div class="navmenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item header_btn">
-                                <a class="nav-link btn btn-reg " href="#">Register</a>
+                                <a class="nav-link btn btn-reg " href="#registerForm">Register</a>
                             </li>
                         </ul>
                     </div>
@@ -351,7 +351,7 @@
     <!-- header ends -->
 
     <!-- hero starts -->
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="hero_title">
@@ -367,7 +367,7 @@
 
                 </div>
                 <div class="col-md-5 order-md-2 order-1">
-                    <div class="hero_form">
+                    <div class="hero_form" id="registerForm">
                         <form>
                             <label for="fname">Name</label>
                             <input type="text" class="form-control" id="fname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30" required>
@@ -490,7 +490,7 @@
                         <p>If you're interested in becoming a part of the cryptocurrency revolution, you've made a wise
                             decision by choosing Bitcode Method to assist you in making the most of your trading
                             experience.</p>
-                        <a href="" class="btn btn-register">Register For Free</a>
+                        <a href="#registerForm" class="btn btn-register">Register For Free</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -581,7 +581,7 @@
                                 automated trading system make it easy to trade the cryptocurrency markets.</p>
                         </div>
                     </div>
-                    <a href="" class="btn btn-register">Register For Free</a>
+                    <a href="#registerForm" class="btn btn-register">Register For Free</a>
                 </div>
             </div>
         </div>
@@ -648,7 +648,7 @@
                         </div>
                     </div>
                     <div class="method_reg">
-                        <a href="" class="btn btn-register">Register For Free</a>
+                        <a href="#registerForm" class="btn btn-register">Register For Free</a>
                     </div>
 
                 </div>
@@ -742,7 +742,7 @@
                     </div>
                 </div>
                 <div class="method_reg mreg">
-                    <a href="" class="btn btn-register">Register For Free</a>
+                    <a href="#registerForm" class="btn btn-register">Register For Free</a>
                 </div>
             </div>
         </div>
@@ -765,7 +765,7 @@
                             the world. BTC Code Method users have significantly expanded the size of their financial
                             portfolios in a short period of time. Simply fill out the registration form below to get
                             started right away.</p>
-                        <a href="" class="btn btn-register">Register For Free</a>
+                        <a href="#registerForm" class="btn btn-register">Register For Free</a>
                     </div>
                 </div>
             </div>
@@ -880,7 +880,7 @@
                     </div>
                 </div>
                 <div class="method_reg">
-                    <a href="" class="btn btn-register">Register For Free</a>
+                    <a href="#registerForm" class="btn btn-register">Register For Free</a>
                 </div>
             </div>
         </div>
@@ -972,8 +972,8 @@
                             and sell commodity options, even if they are called ‘prediction’ contracts unless they are
                             listed for trading and traded on a CFTC-registered exchange or unless legally exempt.</p>
                         <div class="term">
-                            <a href="">Privacy Policy</a>
-                            <a href="">Terms & Conditions</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms-conditions.html">Terms & Conditions</a>
                         </div>
                     </div>
                 </div>
@@ -984,7 +984,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="btn btn-reg" href="#">Register</a>
+                    <a class="btn btn-reg" href="#registerForm">Register</a>
                 </div>
             </div>
         </div>
@@ -1033,16 +1033,14 @@ window.intlTelInput(input,({
                 }
             );
 
-        //     $("#fname").keyup(function () {
-        //         var inputValue = $(this).val();
-        //         var pattern = /^[a-zA-Z\s]{3,30}$/;
-        //         if (pattern.test(inputValue)) {
-        //             $(this).css("border", "1px solid green");
-        //         } else {
-        //             $(this).css("border", "1px solid red");
-        //         }
-        //     });
-        // });
+            $('a[href^="#"]').on("click", function(event) {
+                event.preventDefault();
+                const targetId = $(this).attr("href");
+                $("html, body").animate({
+                scrollTop: $(targetId).offset().top
+                }, 500);
+            });
+        });
 
 
     </script>
