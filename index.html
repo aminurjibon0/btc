@@ -360,27 +360,23 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-md-6 order-md-1 order-2">
+                <div class="col-md-7 order-md-1 order-2">
                     <div class="hero_video">
-                        <!-- <iframe src="https://player.vimeo.com/video/766539058?h=b021089cec" width="640" height="360"
-                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
-                        <video controls>
-                            <source src="#" type="video/mp4">
-                        </video>
+                        <iframe class="lazy entered loaded" loading="lazy" data-src="https://player.vimeo.com/video/319904948" frameborder="0" data-ll-status="loaded" src="https://player.vimeo.com/video/319904948"></iframe>
                     </div>
 
                 </div>
-                <div class="col-md-6 order-md-2 order-1">
+                <div class="col-md-5 order-md-2 order-1">
                     <div class="hero_form">
                         <form>
                             <label for="fname">Name</label>
-                            <input type="text" class="form-control" id="fname">
+                            <input type="text" class="form-control" id="fname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30" required>
                             <label for="surname">Surname</label>
-                            <input type="text" class="form-control" id="surname">
+                            <input type="text" class="form-control" id="surname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email">
+                            <input type="text" class="form-control" id="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                             <label for="phone">Phone</label>
-                            <input type="text" class="form-control" id="phone">
+                            <input type="tel" class="form-control" id="phone" onkeyup="this.value=this.value.replace(/^\d{0-9}$/g,'');" minlength="7" maxlength="13" required>
                             <input type="submit" value="Register for free">
                         </form>
                     </div>
@@ -1036,9 +1032,19 @@ window.intlTelInput(input,({
 
                 }
             );
-        });
 
-        
+        //     $("#fname").keyup(function () {
+        //         var inputValue = $(this).val();
+        //         var pattern = /^[a-zA-Z\s]{3,30}$/;
+        //         if (pattern.test(inputValue)) {
+        //             $(this).css("border", "1px solid green");
+        //         } else {
+        //             $(this).css("border", "1px solid red");
+        //         }
+        //     });
+        // });
+
+
     </script>
 
 
