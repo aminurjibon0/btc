@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <nav class="navbar navbar-light">
-                    <a class="navbar-brand" href="/"><img src="images/logo.png" class="img-fluid" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" class="img-fluid" title="Bitcode Method" alt="Bitcode Method"></a>
                     <div class="navmenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item header_btn">
@@ -370,11 +370,11 @@
                     <div class="hero_form" id="registerForm">
                         <form>
                             <label for="fname">Name</label>
-                            <input type="text" class="form-control" id="fname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30" required>
+                            <input type="text" class="form-control" placeholder="Name" id="fname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30" required>
                             <label for="surname">Surname</label>
-                            <input type="text" class="form-control" id="surname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30">
+                            <input type="text" class="form-control" placeholder="Surename" id="surname" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'');" minlength="3" maxlength="30" required>
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                            <input type="email" class="form-control" placeholder="Email" id="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                             <label for="phone">Phone</label>
                             <input type="tel" class="form-control" id="phone" onkeyup="this.value=this.value.replace(/[^0-9]$/g,'');" minlength="7" maxlength="13" required>
                             <input type="submit" value="Register for free">
@@ -1004,6 +1004,7 @@
         var input = document.querySelector("#phone");
 window.intlTelInput(input,({
     allowDropdown:true,
+    utilsScript: "js/utils.js",
 }));
     </script>
     <script>
